@@ -29,14 +29,14 @@ class ConversationManager(object):
         sidebar = st.sidebar
         sidebar.header("Settings")
 
-        # OpenAI API key input
-        sidebar.text_input(
-            "OpenAI API Key",
-            value=st.session_state.get("api_key", DEFAULT_API_KEY) or "",
-            type="password",
-            key="api_key",
-            help="Paste your OpenAI API key here."
-        )
+        # # OpenAI API key input
+        # sidebar.text_input(
+        #     "OpenAI API Key",
+        #     value=st.session_state.get("api_key", DEFAULT_API_KEY) or "",
+        #     type="password",
+        #     key="api_key",
+        #     help="Paste your OpenAI API key here."
+        # )
 
         # Model selection
         model_options = ["gpt-3.5-turbo", "gpt-4", "gpt-4o"]
