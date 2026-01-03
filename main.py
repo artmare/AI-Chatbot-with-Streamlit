@@ -6,8 +6,10 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-load_dotenv(".env")
-DEFAULT_API_KEY = os.getenv("OPENAI_API_KEY")
+if os.path.exists(".env"):
+    load_dotenv()
+
+DEFAULT_API_KEY = os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 DEFAULT_MODEL = "gpt-3.5-turbo"
 DEFAULT_TEMPERATURE = 0.7
 DEFAULT_MAX_TOKENS = 512
